@@ -1,0 +1,17 @@
+# Maven / Java build
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+
+# Test reports (generated)
+test-output/
+
+# Logs
+*.log
