@@ -38,7 +38,7 @@ public class ExtentTestListener implements ITestListener {
         extent.flush();
     }
 
-    // ✅ THIS METHOD FIXES YOUR ERROR
+   
     public static ExtentTest getTest() {
         return test.get();
     }

@@ -19,7 +19,7 @@ public class DemoAppUiTest extends BaseTest {
 
         ExtentTest extentTest = ExtentTestListener.getTest();
 
-        // 🔹 Call API
+        //  Call API
         Response apiResponse = ApiClient.getTrackingInfo();
         int apiStatusCode = apiResponse.getStatusCode();
 
@@ -35,11 +35,11 @@ public class DemoAppUiTest extends BaseTest {
         Assert.assertEquals(apiRecordCount, 30,
                 "API should return exactly 30 records");
 
-        // 🔹 Open UI
+        //  Open UI
         DemoAppPage page = new DemoAppPage(driver);
         page.open();
 
-        // 🔹 Validate initial UI
+        //  Validate initial UI
         Assert.assertTrue(
                 page.isPageTitleDisplayed(),
                 "Tracking Info List title should be visible"
@@ -52,11 +52,11 @@ public class DemoAppUiTest extends BaseTest {
         );
         extentTest.info("Load Tracking Data button is visible");
 
-        // 🔹 Load data in UI
+        //  Load data in UI
         page.clickLoadTrackingData();
         extentTest.info("Clicked Load Tracking Data button");
 
-        // ✅ WAIT until status shows "Loaded"
+        //  WAIT until status shows "Loaded"
         String statusText = page.waitForStatusToBeLoaded();
         extentTest.info("UI Status Text: " + statusText);
 
@@ -65,7 +65,7 @@ public class DemoAppUiTest extends BaseTest {
                 "Status should indicate data is loaded"
         );
 
-        // 🔹 Validate UI record count
+        //  Validate UI record count
         int uiRecordCount = page.getTrackingCardCount();
         extentTest.info("UI Record Count: " + uiRecordCount);
 
