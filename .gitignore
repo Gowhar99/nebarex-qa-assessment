@@ -1,6 +1,8 @@
 # Maven / Java build
 target/
 *.class
+*.jar
+jacoco.exec
 
 # IDE
 .idea/
