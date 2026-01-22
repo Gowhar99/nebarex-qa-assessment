@@ -15,6 +15,6 @@ public class ApiClient {
         return RestAssured
                 .given()
                 .header("x-api-key", API_KEY)
-                .get(URL);   // ✅ GET, not POST
+                .get(URL);   
     }
 }
